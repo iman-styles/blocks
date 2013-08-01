@@ -1,0 +1,13 @@
+{
+  "name": "blocks",
+  "main": "index.scss",
+  "version": "0.0.1",
+  "dependencies": {},
+  "styles": [
+    "index.scss"
+  ],
+  "files": [
+    "assets/bg-gry-stripes.png",
+    "assets/transparent-grey-stripes.png"
+  ]
+}
