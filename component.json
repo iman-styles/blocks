@@ -7,7 +7,8 @@
     "index.scss"
   ],
   "files": [
-    "assets/bg-gry-stripes.png",
+    "assets/bg-grey-stripes.png",
     "assets/transparent-grey-stripes.png"
-  ]
+  ],
+  "repo": "https://raw.github.com/iman-styles/blocks"
 }

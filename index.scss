@@ -1,14 +1,11 @@
-// Callout styles are applied to wrapping elements to showcase thier content
-// 
-// .block-1 - Grey Striped block
-// .block-2 - Green block with radial gradient & white text
-// .block-3 - Dark grey block with linear gradient & white text/links
-// .block-4 - White block
-// 
-// Styleguide 4.4.0
+$blocks-image-path: "#{$component-path}/iman-styles-blocks/assets" !default;
+
+@function blocks-path($path) {
+  @return "#{$blocks-image-path}/#{$path}";
+}
 
 @function blocks-image-url($path) {
-  @return component-url('nib-styles-common', "local/blocks/images/#{$path}");
+  @return url(blocks-path($path));
 }
 
 /* Grey Striped block */
@@ -89,9 +86,9 @@
   // @include radial-gradient(#7c7c7c, #5c5c5c, center top, 60%);
 
   background-color: rgb(92, 92, 92);
-  background-image: 
+  background-image:
     component-url('nib-styles-common', 'local/blocks/images/transparent-grey-stripes.png'),
-    -webkit-radial-gradient(center top, rgba(124, 124, 124, 0.7) 0, rgb(95, 95, 95) 60%); 
+    -webkit-radial-gradient(center top, rgba(124, 124, 124, 0.7) 0, rgb(95, 95, 95) 60%);
 
   border-top: 1px solid #999;
 }
@@ -123,9 +120,26 @@
 	}
 }
 
-
-
 // Iman blue block
 .block-10 {
   background: lighten($blue-light, 7);
+}
+
+// Iman - Accordion block list
+.block-list-1 {
+  &.block-list--small {
+    @extend .copy--note;
+    .block-list__item {
+      padding: spacing(1.5);
+    }
+  }
+  .block-list__item {
+    @extend %copy;
+    background: #fff;
+    border: 1px solid $border-color;
+    padding: spacing(2);
+  }
+  .block-list__item + .block-list__item {
+    border-top: 0;
+  }
 }
