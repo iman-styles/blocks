@@ -83,14 +83,12 @@ $blocks-image-path: "#{$component-path}/iman-styles-blocks/assets" !default;
 }
 
 .block-9 {
-  // @include radial-gradient(#7c7c7c, #5c5c5c, center top, 60%);
+  background: #eeeeee; 
+  text-align: center; 
+  border-bottom: 2px solid #ddd; 
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  color: #32323c;
 
-  background-color: rgb(92, 92, 92);
-  background-image:
-    component-url('nib-styles-common', 'local/blocks/images/transparent-grey-stripes.png'),
-    -webkit-radial-gradient(center top, rgba(124, 124, 124, 0.7) 0, rgb(95, 95, 95) 60%);
-
-  border-top: 1px solid #999;
 }
 
 // Modifiers
